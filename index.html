@@ -62,6 +62,9 @@
                     <a href="#contacts" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold transition-colors">
                         Contacts & Socials
                     </a>
+                    <a href="#faq" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold transition-colors">
+                        FAQ
+                    </a>
                 </div>
 
                 <div class="hidden sm:flex sm:items-center sm:ml-6 space-x-3">
@@ -87,6 +90,7 @@
                 <a href="#about" onclick="toggleMobileMenu()" class="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-semibold">About Collection</a>
                 <a href="#gallery" onclick="toggleMobileMenu()" class="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-semibold">Gown Gallery</a>
                 <a href="#contacts" onclick="toggleMobileMenu()" class="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-semibold">Contacts & Socials</a>
+                <a href="#faq" onclick="toggleMobileMenu()" class="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-semibold">FAQ</a>
             </div>
             <div class="pt-4 pb-4 border-t border-gray-200 px-4">
                 <div class="flex justify-center space-x-6 mb-4">
@@ -451,12 +455,112 @@
                 <div class="text-center p-4">
                     <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-lg mx-auto shadow-sm">3</div>
                     <h3 class="mt-4 text-base font-bold text-gray-900">Fitting Appointment</h3>
-                    <p class="mt-2 text-xs text-gray-500">Visit our Makati boutique for custom measurements and shape matching.</p>
+                    <p class="mt-2 text-xs text-gray-500">Visit our Buhangin boutique for custom measurements and shape matching.</p>
                 </div>
                 <div class="text-center p-4">
                     <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-lg mx-auto shadow-sm">4</div>
                     <h3 class="mt-4 text-base font-bold text-gray-900">Shine at the Event</h3>
                     <p class="mt-2 text-xs text-gray-500">Enjoy the spotlight, return the gown next day, and we'll handle dry cleaning!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-16 border-t border-b border-gray-200" id="faq">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-800 uppercase tracking-wider mb-3">
+                    Got Questions?
+                </span>
+                <h2 class="text-3xl font-extrabold text-gray-950 sm:text-4xl">Frequently Asked Questions</h2>
+                <p class="text-gray-500 mt-2 text-sm leading-relaxed">
+                    Find quick answers to common questions about our gown rental, booking fittings, and policies.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-gray-50 rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-300">
+                    <button class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 hover:text-indigo-600 focus:outline-none transition-colors" onclick="toggleFaq(0)">
+                        <span>How does the gown rental process work?</span>
+                        <span class="ml-4 flex-shrink-0 text-gray-400 bg-white w-8 h-8 rounded-full flex items-center justify-center border border-gray-150 transition-transform duration-300" id="faq-arrow-0">
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </span>
+                    </button>
+                    <div class="hidden px-5 pb-5 transition-all duration-300" id="faq-answer-0">
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Browse our collection online, filter by style, and screenshot your chosen gown. Message us on Facebook or call us to check availability, then schedule a fitting appointment at our Buhangin boutique!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-300">
+                    <button class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 hover:text-indigo-600 focus:outline-none transition-colors" onclick="toggleFaq(1)">
+                        <span>Is there a rental fee or safety deposit?</span>
+                        <span class="ml-4 flex-shrink-0 text-gray-400 bg-white w-8 h-8 rounded-full flex items-center justify-center border border-gray-150 transition-transform duration-300" id="faq-arrow-1">
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </span>
+                    </button>
+                    <div class="hidden px-5 pb-5 transition-all duration-300" id="faq-answer-1">
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Under our limited-time promo, the solo gown rental is only ₱500 (includes gown, accessories, and heels). A security deposit/valid ID is required upon booking, fully refundable when returned in good condition.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-300">
+                    <button class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 hover:text-indigo-600 focus:outline-none transition-colors" onclick="toggleFaq(2)">
+                        <span>Do you provide alterations or gown adjustments?</span>
+                        <span class="ml-4 flex-shrink-0 text-gray-400 bg-white w-8 h-8 rounded-full flex items-center justify-center border border-gray-150 transition-transform duration-300" id="faq-arrow-2">
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </span>
+                    </button>
+                    <div class="hidden px-5 pb-5 transition-all duration-300" id="faq-answer-2">
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Yes! We offer free basic gown adjustments to ensure the dress fits you beautifully. Sizing adjustments are refined during your scheduled fitting appointment.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-300">
+                    <button class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 hover:text-indigo-600 focus:outline-none transition-colors" onclick="toggleFaq(3)">
+                        <span>How long is the standard rental period?</span>
+                        <span class="ml-4 flex-shrink-0 text-gray-400 bg-white w-8 h-8 rounded-full flex items-center justify-center border border-gray-150 transition-transform duration-300" id="faq-arrow-3">
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </span>
+                    </button>
+                    <div class="hidden px-5 pb-5 transition-all duration-300" id="faq-answer-3">
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Our standard rental period is 3 days: Day 1 for pickup/delivery, Day 2 for your event, and Day 3 for the return. If you need it longer, please let us know during booking.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-300">
+                    <button class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 hover:text-indigo-600 focus:outline-none transition-colors" onclick="toggleFaq(4)">
+                        <span>Do I need to dry clean the gown before returning?</span>
+                        <span class="ml-4 flex-shrink-0 text-gray-400 bg-white w-8 h-8 rounded-full flex items-center justify-center border border-gray-150 transition-transform duration-300" id="faq-arrow-4">
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </span>
+                    </button>
+                    <div class="hidden px-5 pb-5 transition-all duration-300" id="faq-answer-4">
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            No, you do not need to wash or dry clean the gown yourself. Professional dry cleaning is completely handled by us and included in the rental package.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-300">
+                    <button class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-900 hover:text-indigo-600 focus:outline-none transition-colors" onclick="toggleFaq(5)">
+                        <span>What happens if the gown is damaged or stained?</span>
+                        <span class="ml-4 flex-shrink-0 text-gray-400 bg-white w-8 h-8 rounded-full flex items-center justify-center border border-gray-150 transition-transform duration-300" id="faq-arrow-5">
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </span>
+                    </button>
+                    <div class="hidden px-5 pb-5 transition-all duration-300" id="faq-answer-5">
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Minor wear is expected. However, major damages like tears, burns, permanent stains, or missing accessories will incur repair or replacement fees.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -592,6 +696,123 @@
         <div class="max-w-4xl max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
             <img id="lightbox-image" src="" alt="Gown Full View" class="max-w-full max-h-[80vh] rounded-lg shadow-2xl object-contain border border-white/10">
             <p id="lightbox-caption" class="text-white mt-4 text-sm font-semibold tracking-wider uppercase"></p>
+        </div>
+    </div>
+
+    <div id="faq-floating-backdrop" class="fixed inset-0 bg-gray-900/50 backdrop-blur-sm z-50 hidden transition-opacity duration-300 opacity-0" onclick="toggleFloatingFaq()"></div>
+
+    <button onclick="toggleFloatingFaq()" class="fixed bottom-6 right-6 z-40 bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3.5 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2 font-bold text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+        <i class="fa-solid fa-circle-question text-lg"></i>
+        <span>FAQ</span>
+    </button>
+
+    <div id="faq-floating-panel" class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-white shadow-2xl border-l border-gray-150 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <div class="px-6 py-5 bg-gray-50 border-b border-gray-100 flex justify-between items-center">
+            <h3 class="text-base font-bold text-gray-950 flex items-center">
+                <i class="fa-solid fa-circle-question text-indigo-600 mr-2"></i>
+                FAQ Help Center
+            </h3>
+            <button onclick="toggleFloatingFaq()" class="text-gray-400 hover:text-gray-600 transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-200">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto p-6 space-y-4">
+            <div class="bg-gray-50 rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-300">
+                <button class="w-full flex justify-between items-center p-4 text-left font-bold text-sm text-gray-900 hover:text-indigo-600 focus:outline-none transition-colors" onclick="toggleFloatFaq(0)">
+                    <span>How does the rental process work?</span>
+                    <span class="ml-4 flex-shrink-0 text-gray-400 bg-white w-7 h-7 rounded-full flex items-center justify-center border border-gray-150 transition-transform duration-300" id="faq-float-arrow-0">
+                        <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </span>
+                </button>
+                <div class="hidden px-4 pb-4 transition-all duration-300" id="faq-float-answer-0">
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Browse our collection, filter by style, and screenshot your chosen gown. Message us on Facebook or call us to check availability, then schedule a fitting appointment at our Buhangin boutique!
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-300">
+                <button class="w-full flex justify-between items-center p-4 text-left font-bold text-sm text-gray-900 hover:text-indigo-600 focus:outline-none transition-colors" onclick="toggleFloatFaq(1)">
+                    <span>Is there a rental fee or deposit?</span>
+                    <span class="ml-4 flex-shrink-0 text-gray-400 bg-white w-7 h-7 rounded-full flex items-center justify-center border border-gray-150 transition-transform duration-300" id="faq-float-arrow-1">
+                        <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </span>
+                </button>
+                <div class="hidden px-4 pb-4 transition-all duration-300" id="faq-float-answer-1">
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Under our limited promo, the solo gown rental is ₱500 (includes gown, accessories, and heels). A safety deposit/valid ID is required upon booking, fully refundable on return.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-300">
+                <button class="w-full flex justify-between items-center p-4 text-left font-bold text-sm text-gray-900 hover:text-indigo-600 focus:outline-none transition-colors" onclick="toggleFloatFaq(2)">
+                    <span>Do you offer basic alterations?</span>
+                    <span class="ml-4 flex-shrink-0 text-gray-400 bg-white w-7 h-7 rounded-full flex items-center justify-center border border-gray-150 transition-transform duration-300" id="faq-float-arrow-2">
+                        <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </span>
+                </button>
+                <div class="hidden px-4 pb-4 transition-all duration-300" id="faq-float-answer-2">
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Yes! Basic fitting adjustments are offered for free to make sure the dress fits you beautifully on your event. Alterations are made during your fitting appointment.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-300">
+                <button class="w-full flex justify-between items-center p-4 text-left font-bold text-sm text-gray-900 hover:text-indigo-600 focus:outline-none transition-colors" onclick="toggleFloatFaq(3)">
+                    <span>How long is the rental period?</span>
+                    <span class="ml-4 flex-shrink-0 text-gray-400 bg-white w-7 h-7 rounded-full flex items-center justify-center border border-gray-150 transition-transform duration-300" id="faq-float-arrow-3">
+                        <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </span>
+                </button>
+                <div class="hidden px-4 pb-4 transition-all duration-300" id="faq-float-answer-3">
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Standard rental is 3 days: Day 1 for pickup/delivery, Day 2 for your event, and Day 3 for return. Extensions can be arranged during booking if needed.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-300">
+                <button class="w-full flex justify-between items-center p-4 text-left font-bold text-sm text-gray-900 hover:text-indigo-600 focus:outline-none transition-colors" onclick="toggleFloatFaq(4)">
+                    <span>Do I dry clean the gown before returning?</span>
+                    <span class="ml-4 flex-shrink-0 text-gray-400 bg-white w-7 h-7 rounded-full flex items-center justify-center border border-gray-150 transition-transform duration-300" id="faq-float-arrow-4">
+                        <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </span>
+                </button>
+                <div class="hidden px-4 pb-4 transition-all duration-300" id="faq-float-answer-4">
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        No, dry cleaning is fully covered by us! Just return the gown directly, and our professional cleaners will take care of cleaning it.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-300">
+                <button class="w-full flex justify-between items-center p-4 text-left font-bold text-sm text-gray-900 hover:text-indigo-600 focus:outline-none transition-colors" onclick="toggleFloatFaq(5)">
+                    <span>What if the gown is damaged?</span>
+                    <span class="ml-4 flex-shrink-0 text-gray-400 bg-white w-7 h-7 rounded-full flex items-center justify-center border border-gray-150 transition-transform duration-300" id="faq-float-arrow-5">
+                        <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </span>
+                </button>
+                <div class="hidden px-4 pb-4 transition-all duration-300" id="faq-float-answer-5">
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Minor wear is expected. Major damages (tears, burns, permanent stains, or missing heels/accessories) will incur repair or replacement fees from the deposit.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-6 bg-gray-50 border-t border-gray-100 flex flex-col space-y-3">
+            <p class="text-xs text-gray-500 text-center font-medium">Need more direct support?</p>
+            <div class="flex gap-2">
+                <a href="tel:09934124593" class="flex-1 inline-flex items-center justify-center px-4 py-2.5 border border-indigo-600 rounded-lg text-xs font-bold text-indigo-600 bg-white hover:bg-indigo-50 transition-colors shadow-sm">
+                    <i class="fa-solid fa-phone mr-1.5"></i> Call Us
+                </a>
+                <a href="https://www.facebook.com/fbdabarkadsryan" target="_blank" class="flex-1 inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 transition-colors shadow-sm">
+                    <i class="fa-brands fa-facebook-messenger mr-1.5"></i> Messenger
+                </a>
+            </div>
         </div>
     </div>
 
@@ -863,6 +1084,52 @@
             const modal = document.getElementById('image-lightbox-modal');
             modal.classList.add('hidden');
             modal.classList.remove('flex');
+        }
+
+        function toggleFaq(index) {
+            const answer = document.getElementById(`faq-answer-${index}`);
+            const arrow = document.getElementById(`faq-arrow-${index}`);
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                arrow.classList.add('rotate-180');
+            } else {
+                answer.classList.add('hidden');
+                arrow.classList.remove('rotate-180');
+            }
+        }
+
+        function toggleFloatingFaq() {
+            const panel = document.getElementById('faq-floating-panel');
+            const backdrop = document.getElementById('faq-floating-backdrop');
+            if (panel.classList.contains('translate-x-full')) {
+                backdrop.classList.remove('hidden');
+                setTimeout(() => {
+                    backdrop.classList.remove('opacity-0');
+                    backdrop.classList.add('opacity-100');
+                    panel.classList.remove('translate-x-full');
+                    panel.classList.add('translate-x-0');
+                }, 10);
+            } else {
+                panel.classList.remove('translate-x-0');
+                panel.classList.add('translate-x-full');
+                backdrop.classList.remove('opacity-100');
+                backdrop.classList.add('opacity-0');
+                setTimeout(() => {
+                    backdrop.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        function toggleFloatFaq(index) {
+            const answer = document.getElementById(`faq-float-answer-${index}`);
+            const arrow = document.getElementById(`faq-float-arrow-${index}`);
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                arrow.classList.add('rotate-180');
+            } else {
+                answer.classList.add('hidden');
+                arrow.classList.remove('rotate-180');
+            }
         }
 
         document.addEventListener('DOMContentLoaded', () => {

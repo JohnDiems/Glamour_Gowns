@@ -723,6 +723,10 @@
                             <span class="text-gray-900 font-bold" id="modal-gown-style">Ballgown</span>
                         </div>
                         <div class="bg-gray-50 p-2.5 rounded-lg border border-gray-100">
+                            <span class="block text-gray-400 font-semibold uppercase tracking-wider text-[10px]">Size</span>
+                            <span class="text-gray-900 font-bold" id="modal-gown-size">M</span>
+                        </div>
+                        <div class="bg-gray-50 p-2.5 rounded-lg border border-gray-100 col-span-2">
                             <span class="block text-gray-400 font-semibold uppercase tracking-wider text-[10px]">Condition</span>
                             <span class="text-gray-900 font-bold" id="modal-gown-condition">Excellent</span>
                         </div>
@@ -904,7 +908,7 @@
         }
 
         function getGownProperties(filename, index, type) {
-            const sizes = ['S', 'M', 'L', 'XL'];
+            const sizes = ['Adjustable (S - M)', 'Adjustable (M - L)', 'Adjustable (S - L)', 'Adjustable (L - XL)'];
             const colors = ['Royal Blue', 'Emerald Green', 'Blush Pink', 'Crimson Red', 'Silver Gray', 'Midnight Black', 'Gold Champagne', 'Classic White'];
             const styles = ['Ballgown', 'Mermaid', 'A-Line', 'Off-Shoulder'];
             const conditions = ['Excellent', 'Good', 'New'];
@@ -1022,6 +1026,7 @@
 
                         <div class="space-y-2 mt-3 text-sm">
                             <p class="text-gray-600"><span class="font-medium text-gray-900">Style:</span> ${gown.style}</p>
+                            <p class="text-gray-600"><span class="font-medium text-gray-900">Size:</span> ${gown.size}</p>
                             <p class="text-gray-600"><span class="font-medium text-gray-900">Condition:</span> ${gown.condition}</p>
                         </div>
 
@@ -1100,6 +1105,7 @@
         let currentModalGownCode = "";
         function openModal(name, code, size, color, style, condition, price, imageSrc) {
             document.getElementById('modal-gown-name').innerText = name;
+            document.getElementById('modal-gown-size').innerText = size;
             document.getElementById('modal-gown-style').innerText = style;
             document.getElementById('modal-gown-condition').innerText = condition;
             document.getElementById('modal-gown-image').src = imageSrc;

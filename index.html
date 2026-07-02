@@ -5,15 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Glamour Gowns | Elegant Gown Rental Collection</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Font: Figtree (Matches the rental system) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Gowns Data File -->
     <script src="assets/gowns-data.js"></script>
     
     <script>
@@ -38,16 +34,13 @@
 
 <body class="font-sans antialiased bg-gray-50 text-gray-850">
 
-    <!-- Promo Notification Banner -->
     <div class="bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 text-white px-4 py-2.5 text-center text-xs font-bold tracking-wide shadow-sm flex items-center justify-center space-x-2">
         <span>🎉 PROMO SALE VALID UNTIL AUGUST 10 ONLY! ALL GOWNS + ACCESSORIES + HEELS FOR ONLY ₱500! 👗✨</span>
     </div>
 
-    <!-- HEADER / NAVIGATION (Clean Navigation adapted from rental_Gown layouts) -->
     <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
-                <!-- Brand Logo -->
                 <div class="flex">
                     <div class="flex-shrink-0 flex items-center">
                         <a href="#" class="flex items-center">
@@ -56,7 +49,6 @@
                     </div>
                 </div>
 
-                <!-- Navigation menu options -->
                 <div class="hidden sm:-my-px sm:ml-10 sm:flex sm:space-x-8">
                     <a href="#about" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold transition-colors">
                         About Collection
@@ -72,7 +64,6 @@
                     </a>
                 </div>
 
-                <!-- Social Links Quick Header -->
                 <div class="hidden sm:flex sm:items-center sm:ml-6 space-x-3">
                     <a href="https://www.facebook.com/fbdabarkadsryan" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-indigo-50 hover:text-indigo-600 flex items-center justify-center text-gray-500 transition-all">
                         <i class="fa-brands fa-facebook-f text-sm"></i>
@@ -82,7 +73,6 @@
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <div class="-mr-2 flex items-center sm:hidden">
                     <button type="button" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         <i class="fa-solid fa-bars text-xl" id="menu-icon-bars"></i>
@@ -92,7 +82,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div class="hidden sm:hidden bg-white border-b border-gray-200" id="mobile-menu">
             <div class="pt-2 pb-3 space-y-1 px-4">
                 <a href="#about" onclick="toggleMobileMenu()" class="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-semibold">About Collection</a>
@@ -111,10 +100,8 @@
         </div>
     </nav>
 
-    <!-- PREMIUM HERO BANNER -->
     <header class="bg-indigo-950 text-white relative overflow-hidden py-20 lg:py-28">
         <div class="absolute inset-0 opacity-20">
-            <!-- Pattern overlay -->
             <svg class="w-full h-full" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <defs>
                     <pattern id="diagonal-lines" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -126,7 +113,6 @@
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
-            <!-- Left Hero Text -->
             <div class="space-y-6 text-center lg:text-left">
                 <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/30 text-indigo-200 uppercase tracking-widest border border-indigo-400/20">
                     <i class="fa-solid fa-star mr-1.5 text-yellow-400"></i> Luxury Gown Rentals
@@ -147,7 +133,6 @@
                 </div>
             </div>
 
-            <!-- Right Hero Image Stack (Premium Look) -->
             <div class="relative hidden lg:block">
                 <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500/10 to-indigo-500/0 rounded-3xl transform rotate-3 scale-95 border border-white/10 z-0"></div>
                 <img src="https://images.unsplash.com/photo-1594552072238-b8a33785b261?auto=format&fit=crop&w=700&q=80" 
@@ -167,13 +152,11 @@
         </div>
     </header>
 
-    <!-- SOCIAL MEDIA & CONTACT QUICK HIGHLIGHT RIBBON -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-30" id="contacts">
         <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8">
             <h2 class="text-xs font-extrabold uppercase text-gray-400 tracking-widest text-center mb-6">Connect & Book Fittings Directly</h2>
             
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <!-- Phone card -->
                 <a href="tel:09934124593" class="bg-gray-50 hover:bg-indigo-50/50 p-4 rounded-xl border border-gray-150 hover:border-indigo-200 transition-all flex items-center space-x-4 group">
                     <div class="bg-indigo-100 text-indigo-600 p-3 rounded-xl group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-200">
                         <i class="fa-solid fa-phone text-lg"></i>
@@ -184,7 +167,6 @@
                     </div>
                 </a>
 
-                <!-- Facebook card -->
                 <a href="https://www.facebook.com/fbdabarkadsryan" target="_blank" class="bg-gray-50 hover:bg-blue-50/50 p-4 rounded-xl border border-gray-150 hover:border-blue-200 transition-all flex items-center space-x-4 group">
                     <div class="bg-blue-100 text-blue-600 p-3 rounded-xl group-hover:bg-blue-600 group-hover:text-white transition-colors duration-200">
                         <i class="fa-brands fa-facebook-f text-lg"></i>
@@ -195,7 +177,6 @@
                     </div>
                 </a>
 
-                <!-- Location card -->
                 <a href="https://www.google.com/maps/@7.1097747,125.6204527,3a,75y,189.48h,83.95t/data=!3m7!1e1!3m5!1s77HPeti64el2Bx5dvpbHoQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D6.045206395374265%26panoid%3D77HPeti64el2Bx5dvpbHoQ%26yaw%3D189.48311110399615!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="bg-gray-50 hover:bg-amber-50/50 p-4 rounded-xl border border-gray-150 hover:border-amber-200 transition-all flex items-center space-x-4 group">
                     <div class="bg-amber-100 text-amber-700 p-3 rounded-xl group-hover:bg-amber-600 group-hover:text-white transition-colors duration-200">
                         <i class="fa-solid fa-map-location-dot text-lg"></i>
@@ -209,7 +190,6 @@
         </div>
     </section>
 
-    <!-- SPECIAL PROMO OFFERS SECTION -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-gray-100" id="promo">
         <div class="text-center max-w-xl mx-auto mb-12">
             <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-800 uppercase tracking-wider mb-3">
@@ -223,7 +203,6 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             
-            <!-- PROMO 1: SOLO GOWN SALE -->
             <div class="relative bg-gradient-to-br from-indigo-900 to-slate-900 rounded-3xl p-8 text-white shadow-xl overflow-hidden border border-indigo-800">
                 <div class="absolute -right-16 -top-16 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl"></div>
                 
@@ -270,7 +249,6 @@
                 </div>
             </div>
 
-            <!-- PROMO 2: BEAUTY BUNDLE -->
             <div class="relative bg-gradient-to-br from-purple-950 to-pink-950 rounded-3xl p-8 text-white shadow-xl overflow-hidden border border-purple-800">
                 <div class="absolute -right-16 -top-16 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl"></div>
                 
@@ -318,10 +296,8 @@
             </div>
         </div>
 
-        <!-- WHY CHOOSE US & LOCATION INFO GRID -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8" id="location-map">
             
-            <!-- What We Offer -->
             <div class="bg-white p-6 rounded-2xl border border-gray-150 shadow-sm">
                 <h4 class="text-base font-bold text-gray-900 mb-4 flex items-center">
                     <i class="fa-solid fa-star text-indigo-600 mr-2"></i>
@@ -345,7 +321,6 @@
                 </div>
             </div>
 
-            <!-- Address & Directions -->
             <div class="bg-white p-6 rounded-2xl border border-gray-150 shadow-sm lg:col-span-2">
                 <h4 class="text-base font-bold text-gray-900 mb-4 flex items-center">
                     <i class="fa-solid fa-location-dot text-rose-500 mr-2"></i>
@@ -380,7 +355,6 @@
             </div>
         </div>
 
-        <!-- Terms and warning notices -->
         <div class="mt-8 bg-amber-50/50 border border-amber-100 rounded-2xl p-5">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs text-amber-900">
                 <div class="flex items-center space-x-2">
@@ -403,7 +377,6 @@
         </div>
     </section>
 
-    <!-- CORE COLLECTION / INTERACTIVE GOWN GALLERY -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="gallery">
         <div class="text-center max-w-xl mx-auto mb-10">
             <h2 class="text-3xl font-extrabold text-gray-950">Explore Glamour Gowns</h2>
@@ -412,7 +385,6 @@
             </p>
         </div>
 
-        <!-- CATEGORIES FILTER BAR -->
         <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
             <button onclick="filterGowns('All')" class="filter-btn active px-4 py-2 border border-gray-300 text-xs sm:text-sm font-bold rounded-lg text-gray-600 hover:border-indigo-400 hover:text-indigo-600 transition-colors shadow-sm focus:outline-none">
                 All Designs
@@ -431,35 +403,28 @@
             </button>
         </div>
 
-        <!-- TOP GOWNS SECTION (First 10 Gowns from topGowns array, no pagination) -->
         <div class="mb-16 animate-fade-in" id="top-gowns-section">
             <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <i class="fa-solid fa-crown text-amber-500 mr-2.5"></i>
                 Featured Top Gowns
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="top-gowns-grid">
-                <!-- Javascript will inject the first 10 topGowns cards here -->
             </div>
         </div>
 
-        <!-- MAIN COLLECTION SECTION (Remaining Gowns, paginated) -->
         <div id="main-collection-section">
             <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <i class="fa-solid fa-gem text-indigo-600 mr-2.5"></i>
                 More Gowns
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" id="collection-gowns-grid">
-                <!-- Javascript will inject paginated cards here -->
             </div>
             
-            <!-- PAGINATION CONTROLS -->
             <div class="flex items-center justify-center space-x-2 pb-6" id="pagination-controls">
-                <!-- Javascript will inject pagination buttons here -->
             </div>
         </div>
     </section>
 
-    <!-- SECTION ABOUT / HOW RENTALS WORK -->
     <section class="bg-white border-t border-b border-gray-200 py-16" id="about">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center max-w-xl mx-auto mb-12">
@@ -473,25 +438,21 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Step 1 -->
                 <div class="text-center p-4">
                     <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-lg mx-auto shadow-sm">1</div>
                     <h3 class="mt-4 text-base font-bold text-gray-900">Choose Design</h3>
                     <p class="mt-2 text-xs text-gray-500">Browse the portfolio and pick the styling that calls your name.</p>
                 </div>
-                <!-- Step 2 -->
                 <div class="text-center p-4">
                     <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-lg mx-auto shadow-sm">2</div>
                     <h3 class="mt-4 text-base font-bold text-gray-900">Contact Us</h3>
                     <p class="mt-2 text-xs text-gray-500">Message us on Facebook, Instagram, or call to check date availability.</p>
                 </div>
-                <!-- Step 3 -->
                 <div class="text-center p-4">
                     <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-lg mx-auto shadow-sm">3</div>
                     <h3 class="mt-4 text-base font-bold text-gray-900">Fitting Appointment</h3>
                     <p class="mt-2 text-xs text-gray-500">Visit our Makati boutique for custom measurements and shape matching.</p>
                 </div>
-                <!-- Step 4 -->
                 <div class="text-center p-4">
                     <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-lg mx-auto shadow-sm">4</div>
                     <h3 class="mt-4 text-base font-bold text-gray-900">Shine at the Event</h3>
@@ -501,7 +462,6 @@
         </div>
     </section>
 
-    <!-- STATIC CALL TO ACTION -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="contacts-cta">
         <div class="bg-indigo-950 rounded-2xl shadow-xl overflow-hidden p-8 sm:p-12 text-center text-white relative">
             <div class="absolute inset-0 opacity-10">
@@ -526,11 +486,9 @@
         </div>
     </section>
 
-    <!-- FOOTER (Matching color scheme & styling rules of rental_Gown system footer) -->
     <footer class="bg-white border-t border-gray-200 mt-20">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 border-b border-gray-100 pb-8">
-                <!-- Branding column -->
                 <div class="space-y-3">
                     <a href="#" class="flex items-center">
                         <img src="assets/images/logo.jpg" alt="Glamour Gowns Logo" class="h-14 w-auto rounded-lg object-contain">
@@ -539,7 +497,6 @@
                         Empowering elegance and self-expression. We rent luxury gowns for all special occasions, wedding banquets, and red carpets with professional sizing and care.
                     </p>
                 </div>
-                <!-- Links column -->
                 <div>
                     <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">Store Hours</h3>
                     <p class="text-xs text-gray-500 leading-relaxed">
@@ -547,7 +504,6 @@
                         8:00 AM – 8:00 PM
                     </p>
                 </div>
-                <!-- Contact info -->
                 <div>
                     <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">Contact Us</h3>
                     <p class="text-xs text-gray-500">
@@ -571,10 +527,8 @@
         </div>
     </footer>
 
-    <!-- INTERACTIVE MODAL FOR VIEW DETAILS (Mimics show.blade.php layout details) -->
     <div id="gown-details-modal" class="fixed inset-0 bg-gray-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full overflow-hidden border border-gray-100 transform scale-95 transition-all duration-300" id="modal-container">
-            <!-- Modal Header -->
             <div class="px-6 py-4 bg-gray-50 border-b border-gray-100 flex justify-between items-center">
                 <h3 class="text-lg font-bold text-gray-950 flex items-center">
                     <i class="fa-solid fa-gem text-indigo-600 mr-2"></i>
@@ -585,13 +539,10 @@
                 </button>
             </div>
             
-            <!-- Modal Body (Replicates the 2-column layout in gowns/show.blade.php) -->
             <div class="p-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <!-- Left: Gown image -->
                 <div>
                     <img id="modal-gown-image" src="" alt="Gown Image" class="w-full h-72 object-cover rounded-xl shadow-md border border-gray-100">
                 </div>
-                <!-- Right: Details list -->
                 <div class="space-y-4">
                     <div>
                         <h4 class="text-xl font-bold text-gray-950" id="modal-gown-name">Royal Velvet Ballgown</h4>
@@ -616,9 +567,7 @@
                         </div>
                     </div>
                     
-                    <!-- Price block removed -->
 
-                    <!-- Screenshot reservation instructions -->
                     <div class="bg-indigo-50 border border-indigo-100/60 rounded-xl p-3.5 flex items-start space-x-2.5">
                         <i class="fa-solid fa-camera text-indigo-600 text-base mt-0.5"></i>
                         <p class="text-xs text-indigo-950 font-medium leading-relaxed">
@@ -636,7 +585,6 @@
         </div>
     </div>
 
-    <!-- Fullscreen Image Lightbox Modal -->
     <div id="image-lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 transition-all duration-300" onclick="closeImageModal()">
         <button class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors text-3xl focus:outline-none" onclick="closeImageModal()">
             <i class="fa-solid fa-xmark"></i>
@@ -647,9 +595,7 @@
         </div>
     </div>
 
-    <!-- DYNAMIC PORTFOLIO LOGIC -->
     <script>
-        // Toggle mobile navbar menu
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const iconBars = document.getElementById('menu-icon-bars');
@@ -666,7 +612,6 @@
             }
         }
 
-        // Deterministic gown properties generator
         function getGownProperties(filename, index, type) {
             const sizes = ['S', 'M', 'L', 'XL'];
             const colors = ['Royal Blue', 'Emerald Green', 'Blush Pink', 'Crimson Red', 'Silver Gray', 'Midnight Black', 'Gold Champagne', 'Classic White'];
@@ -693,14 +638,11 @@
             };
         }
 
-        // Ensure GOWNS_DATA is defined, else fallback to empty lists
         const safeGownsData = typeof GOWNS_DATA !== 'undefined' ? GOWNS_DATA : { topGowns: [], gowns: [] };
 
-        // Clean out null, undefined, or empty element strings from arrays
         const cleanTopGowns = (safeGownsData.topGowns || []).filter(f => f && typeof f === 'string' && f.trim() !== '');
         const cleanGowns = (safeGownsData.gowns || []).filter(f => f && typeof f === 'string' && f.trim() !== '');
 
-        // Initialize Lists
         const topGownsList = cleanTopGowns.slice(0, 10).map((file, i) => {
             return {
                 filename: file,
@@ -731,9 +673,7 @@
         let currentPage = 1;
         const itemsPerPage = 12;
 
-        // Render function
         function renderAll() {
-            // 1. Render top gowns
             const filteredTop = topGownsList.filter(g => currentCategory === 'All' || g.style === currentCategory);
             const topGrid = document.getElementById('top-gowns-grid');
             const topSection = document.getElementById('top-gowns-section');
@@ -745,7 +685,6 @@
                 topGrid.innerHTML = filteredTop.map(g => createTopGownCardHTML(g)).join('');
             }
 
-            // 2. Render paginated collection
             const filteredCollection = allCollectionGowns.filter(g => currentCategory === 'All' || g.style === currentCategory);
             const totalItems = filteredCollection.length;
             const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -776,7 +715,6 @@
             }
         }
 
-        // Gown Card Template Builder
         function createGownCardHTML(gown) {
             return `
                 <div class="gown-card bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
@@ -808,7 +746,6 @@
             `;
         }
 
-        // Draw pagination links
         function renderPaginationControls(totalPages) {
             const controls = document.getElementById('pagination-controls');
             if (totalPages <= 1) {
@@ -818,7 +755,6 @@
 
             let html = '';
             
-            // Prev button
             html += `
                 <button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''} class="px-3.5 py-2 border border-gray-300 rounded-lg text-sm font-bold text-gray-600 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors focus:outline-none">
                     <i class="fa-solid fa-chevron-left"></i>
@@ -841,7 +777,6 @@
                 `;
             }
 
-            // Next button
             html += `
                 <button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''} class="px-3.5 py-2 border border-gray-300 rounded-lg text-sm font-bold text-gray-600 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors focus:outline-none">
                     <i class="fa-solid fa-chevron-right"></i>
@@ -856,7 +791,6 @@
             renderAll();
         }
 
-        // Live Gown Category Filtering
         function filterGowns(category) {
             currentCategory = category;
             currentPage = 1;
@@ -874,7 +808,6 @@
             renderAll();
         }
 
-        // Detail Specs Modal
         let currentModalGownCode = "";
         function openModal(name, code, size, color, style, condition, price, imageSrc) {
             document.getElementById('modal-gown-name').innerText = name;
@@ -907,7 +840,6 @@
             }, 200);
         }
 
-        // Featured Top Gowns Card Builder (Image only, clickable lightbox)
         function createTopGownCardHTML(gown) {
             return `
                 <div class="gown-card bg-white rounded-lg shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all duration-300 overflow-hidden border border-gray-100 cursor-pointer" onclick="openImageModal('${gown.path}', '${gown.name}')">
@@ -918,7 +850,6 @@
             `;
         }
 
-        // Lightbox Modal Functions
         function openImageModal(imageSrc, name) {
             document.getElementById('lightbox-image').src = imageSrc;
             document.getElementById('lightbox-caption').innerText = name;
@@ -934,7 +865,6 @@
             modal.classList.remove('flex');
         }
 
-        // On document load
         document.addEventListener('DOMContentLoaded', () => {
             renderAll();
         });

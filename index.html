@@ -697,6 +697,35 @@
         </div>
     </footer>
 
+    <!-- TERMS & CONDITIONS WELCOME POPUP MODAL -->
+    <div id="terms-modal" class="fixed inset-0 bg-gray-900/60 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden border border-gray-100 transform scale-95 transition-all duration-300" id="terms-modal-container">
+            <div class="px-6 py-5 bg-gradient-to-r from-indigo-700 to-purple-700 text-white flex items-center space-x-2">
+                <i class="fa-solid fa-circle-exclamation text-xl text-indigo-200"></i>
+                <h3 class="text-base font-bold tracking-wide uppercase">Important Notice: Terms & Conditions</h3>
+            </div>
+            
+            <div class="p-6 space-y-4 text-sm text-gray-600 leading-relaxed max-h-[60vh] overflow-y-auto">
+                <p class="font-semibold text-gray-900 text-base">FOR MORE INFORMATION - TERMS AND CONDITIONS</p>
+                
+                <p>Please take time to read and understand our terms and conditions carefully before booking or availing our services. These guidelines are set to ensure smooth transactions and proper coordination with all clients.</p>
+                
+                <p>By proceeding with any reservation or service, you agree to follow our policies, including proper booking procedures, confirmation requirements, and scheduled appointments. Failure to comply may result in cancellation or refusal of service.</p>
+                
+                <div class="bg-indigo-50 border border-indigo-100 p-3.5 rounded-xl flex items-start space-x-3 text-indigo-950 text-xs font-medium">
+                    <i class="fa-solid fa-handshake text-indigo-600 text-base mt-0.5"></i>
+                    <span>We appreciate your cooperation and understanding. Thank you for choosing Glamour Gowns!</span>
+                </div>
+            </div>
+            
+            <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex justify-end">
+                <button onclick="acceptTerms()" class="w-full sm:w-auto px-6 py-3 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 shadow-md font-bold text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                    I Understand & Agree
+                </button>
+            </div>
+        </div>
+    </div>
+
     <div id="gown-details-modal" class="fixed inset-0 bg-gray-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full overflow-hidden border border-gray-100 transform scale-95 transition-all duration-300" id="modal-container">
             <div class="px-6 py-4 bg-gray-50 border-b border-gray-100 flex justify-between items-center">
@@ -1264,8 +1293,33 @@
             }
         }
 
+        function checkTerms() {
+            const accepted = localStorage.getItem('glamour_gowns_terms_accepted');
+            if (!accepted) {
+                const modal = document.getElementById('terms-modal');
+                const container = document.getElementById('terms-modal-container');
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    container.classList.remove('scale-95');
+                    container.classList.add('scale-100');
+                }, 10);
+            }
+        }
+
+        function acceptTerms() {
+            const modal = document.getElementById('terms-modal');
+            const container = document.getElementById('terms-modal-container');
+            container.classList.remove('scale-100');
+            container.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                localStorage.setItem('glamour_gowns_terms_accepted', 'true');
+            }, 200);
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             renderAll();
+            checkTerms();
         });
     </script>
 </body>

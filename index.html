@@ -29,9 +29,6 @@
     <meta name="twitter:image" content="assets/images/top_gown/474476352_122178996668047950_3107166865959855880_n.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="assets/gowns-data.js"></script>
     
@@ -40,57 +37,57 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Figtree', 'sans-serif'],
+                        sans: ['var(--storefront-font)']
+                    },
+                    colors: {
+                        gray: {50: '#f8f5fa', 100: '#eee8f1', 150: '#e6dce9', 200: '#ded1e2', 300: '#cbbacf', 400: '#98869e', 500: '#74617b', 600: '#635069', 700: '#514057', 800: '#422e49', 850: '#392741', 900: '#302037', 950: '#24152a'},
+                        indigo: {50: '#f4ebf7', 100: '#ecdef2', 200: '#dfc9e8', 300: '#d3b4df', 400: '#be94cf', 500: '#9c6aad', 600: '#774284', 700: '#66346f', 800: '#512657', 900: '#3b1d42', 950: '#28152f'},
                     }
                 }
             }
         }
     </script>
-    <style>
-        .filter-btn.active {
-            background-color: #4f46e5;
-            color: #ffffff;
-            border-color: #4f46e5;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/storefront.css">
 </head>
 
 <body class="font-sans antialiased bg-gray-50 text-gray-850">
 
-    <div class="bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 text-white px-4 py-2.5 text-center text-xs font-bold tracking-wide shadow-sm flex items-center justify-center space-x-2">
-        <span>🎉 PROMO SALE VALID UNTIL AUGUST 10 ONLY! ALL GOWNS + ACCESSORIES + HEELS FOR ONLY ₱500! 👗✨</span>
-    </div>
+    <a href="#promo" class="promo-strip">
+        <i class="fa-solid fa-tag" aria-hidden="true"></i>
+        <span>Gown, accessories and heels for ₱500 through August 10</span>
+    </a>
 
     <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 lg:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex">
                     <div class="flex-shrink-0 flex items-center">
                         <a href="#" class="flex items-center">
-                            <img src="assets/images/logo.jpg" alt="Glamour Gowns Logo" class="h-12 w-auto rounded-lg object-contain">
+                            <img src="assets/images/logo.jpg" alt="" class="h-10 w-auto rounded-full object-contain">
+                            <span class="wordmark">Glamour Gowns</span>
                         </a>
                     </div>
                 </div>
 
-                <div class="hidden sm:-my-px sm:ml-10 sm:flex sm:space-x-8">
+                <div class="hidden lg:-my-px lg:ml-10 lg:flex lg:space-x-8">
                     <a href="#about" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold transition-colors">
-                        About Collection
+                        Rental process
                     </a>
                     <a href="#promo" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold transition-colors">
-                        Promo Offers
+                        Offers
                     </a>
                     <a href="#gallery" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold transition-colors">
-                        Gown Gallery
+                        Collection
                     </a>
                     <a href="#contacts" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold transition-colors">
-                        Contacts & Socials
+                        Contact
                     </a>
                     <a href="#faq" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold transition-colors">
                         FAQ
                     </a>
                 </div>
 
-                <div class="hidden sm:flex sm:items-center sm:ml-6 space-x-3">
+                <div class="hidden lg:flex lg:items-center lg:ml-6 space-x-3">
                     <a href="https://www.facebook.com/fbdabarkadsryan" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-indigo-50 hover:text-indigo-600 flex items-center justify-center text-gray-500 transition-all">
                         <i class="fa-brands fa-facebook-f text-sm"></i>
                     </a>
@@ -99,8 +96,8 @@
                     </a>
                 </div>
 
-                <div class="-mr-2 flex items-center sm:hidden">
-                    <button type="button" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <div class="-mr-2 flex items-center lg:hidden">
+                    <button type="button" id="mobile-menu-toggle" aria-label="Toggle navigation" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         <i class="fa-solid fa-bars text-xl" id="menu-icon-bars"></i>
                         <i class="fa-solid fa-xmark text-xl hidden" id="menu-icon-close"></i>
                     </button>
@@ -108,11 +105,12 @@
             </div>
         </div>
 
-        <div class="hidden sm:hidden bg-white border-b border-gray-200" id="mobile-menu">
+        <div class="hidden lg:hidden bg-white border-b border-gray-200" id="mobile-menu">
             <div class="pt-2 pb-3 space-y-1 px-4">
-                <a href="#about" onclick="toggleMobileMenu()" class="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-semibold">About Collection</a>
-                <a href="#gallery" onclick="toggleMobileMenu()" class="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-semibold">Gown Gallery</a>
-                <a href="#contacts" onclick="toggleMobileMenu()" class="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-semibold">Contacts & Socials</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-semibold">Rental process</a>
+                <a href="#promo" onclick="toggleMobileMenu()" class="block px-4 py-2 font-semibold">Offers</a>
+                <a href="#gallery" onclick="toggleMobileMenu()" class="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-semibold">Collection</a>
+                <a href="#contacts" onclick="toggleMobileMenu()" class="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-semibold">Contact</a>
                 <a href="#faq" onclick="toggleMobileMenu()" class="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-semibold">FAQ</a>
             </div>
             <div class="pt-4 pb-4 border-t border-gray-200 px-4">
@@ -127,61 +125,30 @@
         </div>
     </nav>
 
-    <header class="bg-indigo-950 text-white relative overflow-hidden py-20 lg:py-28">
-        <div class="absolute inset-0 opacity-20">
-            <svg class="w-full h-full" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <defs>
-                    <pattern id="diagonal-lines" width="10" height="10" patternUnits="userSpaceOnUse">
-                        <path d="M-1,1 l2,-2 M0,10 l10,-10 M9,11 l2,-2" stroke="rgba(255,255,255,0.15)" stroke-width="1.2" />
-                    </pattern>
-                </defs>
-                <rect width="100" height="100" fill="url(#diagonal-lines)" />
-            </svg>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-            <div class="space-y-6 text-center lg:text-left">
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/30 text-indigo-200 uppercase tracking-widest border border-indigo-400/20">
-                    <i class="fa-solid fa-star mr-1.5 text-yellow-400"></i> Luxury Gown Rentals
-                </span>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
-                    Timeless Gowns for Your <span class="text-indigo-400">Perfect Moment</span>
-                </h1>
-                <p class="text-lg text-indigo-100 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
-                    Welcome to our exclusive couture collection. Browse, filter, and choose from our premium gowns tailored for weddings, debuts, and galas. Easy holding requests and fitting arrangements.
-                </p>
-                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                    <a href="#gallery" class="px-6 py-3 border border-transparent text-base font-bold rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 shadow-lg active:bg-indigo-800 transition-all">
-                        Browse Gown Collection
-                    </a>
-                    <a href="https://www.facebook.com/fbdabarkadsryan" target="_blank" class="px-6 py-3 border border-indigo-500/40 text-base font-bold rounded-lg text-indigo-200 hover:text-white hover:bg-indigo-900/30 transition-all flex items-center text-indigo-200">
-                        <i class="fa-brands fa-facebook-messenger mr-2 text-indigo-400 text-lg"></i> Send Facebook Message
-                    </a>
+    <header class="storefront-hero">
+        <div class="hero-layout max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="hero-copy">
+                <h1>Dress for the occasion</h1>
+                <p>Rent gowns for weddings, debuts, and formal events. Browse the collection and arrange a fitting in Buhangin, Davao City.</p>
+                <div class="hero-actions">
+                    <a href="#gallery" class="hero-primary">Browse gowns <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                    <a href="#contacts" class="hero-secondary">Arrange a fitting</a>
                 </div>
             </div>
-
-            <div class="relative hidden lg:block">
-                <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500/10 to-indigo-500/0 rounded-3xl transform rotate-3 scale-95 border border-white/10 z-0"></div>
-                <img src="https://images.unsplash.com/photo-1594552072238-b8a33785b261?auto=format&fit=crop&w=700&q=80" 
-                     alt="Featured Bridal Dress Detail" 
-                     class="w-full h-[420px] object-cover rounded-2xl shadow-2xl relative z-10 border border-white/10">
-                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border border-gray-150 z-20 flex items-center space-x-3 text-gray-800">
-                    <div class="bg-green-100 text-green-700 p-2.5 rounded-lg">
-                        <i class="fa-solid fa-circle-check text-lg"></i>
-                    </div>
-                    <div>
-                        <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Gown Status</p>
-                        <p class="text-sm font-bold text-gray-900">Dry-Cleaned & Ready</p>
-                    </div>
+            <div class="hero-photographs">
+                <div class="hero-portrait">
+                    <img src="assets/images/top_gown/474523106_122178997274047950_366300940102494233_n.jpg" alt="Wine-red evening gown from the rental collection" width="1536" height="2048" fetchpriority="high">
+                </div>
+                <div class="hero-portrait hero-portrait-secondary">
+                    <img src="assets/images/top_gown/474498972_122178996806047950_4068629237670454193_n.jpg" alt="Champagne beaded gown from the rental collection" width="1536" height="2048">
                 </div>
             </div>
-
         </div>
     </header>
 
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-30" id="contacts">
-        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8">
-            <h2 class="text-xs font-extrabold uppercase text-gray-400 tracking-widest text-center mb-6">Connect & Book Fittings Directly</h2>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8" id="contacts">
+        <div class="fitting-panel">
+            <h2 class="section-title text-gray-950 mb-4">Arrange a fitting</h2>
             
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <a href="tel:09934124593" class="bg-gray-50 hover:bg-indigo-50/50 p-4 rounded-xl border border-gray-150 hover:border-indigo-200 transition-all flex items-center space-x-4 group">
@@ -218,11 +185,8 @@
     </section>
 
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-gray-100" id="promo">
-        <div class="text-center max-w-xl mx-auto mb-12">
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-800 uppercase tracking-wider mb-3">
-                🔥 Limited Time Offer
-            </span>
-            <h2 class="text-3xl font-extrabold text-gray-950 sm:text-4xl">🎉 Special Promo Sale! 🎉</h2>
+        <div class="mb-8">
+            <h2 class="section-title">Rental offers</h2>
             <p class="text-gray-500 mt-2 text-sm leading-relaxed">
                 Save big on premium styling and rentals. Valid until <span class="font-semibold text-gray-900">August 10</span> only. First come, first served!
             </p>
@@ -230,32 +194,32 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             
-            <div class="relative bg-gradient-to-br from-indigo-900 to-slate-900 rounded-3xl p-8 text-white shadow-xl overflow-hidden border border-indigo-800">
+            <div class="relative bg-indigo-950 rounded-lg p-8 text-white shadow-xl overflow-hidden border border-indigo-800">
                 <div class="absolute -right-16 -top-16 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl"></div>
                 
                 <div class="relative z-10 flex flex-col h-full justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-extrabold uppercase tracking-widest text-indigo-400 bg-indigo-900/50 px-3 py-1 rounded-lg">👗 Gown Solo Promo</span>
-                            <span class="text-xs text-rose-400 font-bold">Ends Aug 10</span>
+                            <span class="text-sm font-semibold text-indigo-400 bg-indigo-900/50 px-3 py-1 rounded-lg">Gown Solo Promo</span>
+                            <span class="text-sm text-indigo-200 font-semibold">Ends Aug 10</span>
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-2">Solo Rental Package</h3>
-                        <p class="text-xs text-indigo-200 leading-relaxed mb-6">Affordable and elegant gowns for JS Prom, Graduation, Pageants, and weddings.</p>
+                        <p class="text-sm text-indigo-200 leading-relaxed mb-6">Affordable and elegant gowns for JS Prom, Graduation, Pageants, and weddings.</p>
                         
                         <ul class="space-y-3.5 mb-8">
-                            <li class="flex items-center text-xs text-indigo-100">
+                            <li class="flex items-center text-sm text-indigo-100">
                                 <i class="fa-solid fa-circle-check text-indigo-400 mr-2.5 text-base"></i>
                                 <span>All Gowns included</span>
                             </li>
-                            <li class="flex items-center text-xs text-indigo-100">
+                            <li class="flex items-center text-sm text-indigo-100">
                                 <i class="fa-solid fa-circle-check text-indigo-400 mr-2.5 text-base"></i>
                                 <span>Matching Accessories included</span>
                             </li>
-                            <li class="flex items-center text-xs text-indigo-100">
+                            <li class="flex items-center text-sm text-indigo-100">
                                 <i class="fa-solid fa-circle-check text-indigo-400 mr-2.5 text-base"></i>
                                 <span>Heels/Sandals included</span>
                             </li>
-                            <li class="flex items-center text-xs text-indigo-100">
+                            <li class="flex items-center text-sm text-indigo-100">
                                 <i class="fa-solid fa-circle-check text-indigo-400 mr-2.5 text-base"></i>
                                 <span class="font-bold text-white">FREE gown adjustments included</span>
                             </li>
@@ -263,59 +227,59 @@
                     </div>
 
                     <div>
-                        <div class="border-t border-indigo-800/80 pt-6 flex items-center justify-between mb-2">
+                        <div class="border-t border-indigo-800/80 pt-6 flex flex-wrap items-center justify-between gap-4 mb-2">
                             <div>
-                                <p class="text-[10px] text-indigo-400 font-semibold uppercase tracking-wider">Promo Rate</p>
+                                <p class="text-sm text-indigo-400 font-medium">Promo Rate</p>
                                 <p class="text-3xl font-extrabold text-white">₱500</p>
                             </div>
-                            <a href="https://www.facebook.com/fbdabarkadsryan" target="_blank" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-xs font-bold rounded-lg transition-colors flex items-center text-white">
-                                Reserve Slot <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i>
+                            <a href="https://www.facebook.com/fbdabarkadsryan" target="_blank" class="px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-sm font-bold rounded-lg transition-colors flex items-center text-white">
+                                Reserve slot <i class="fa-solid fa-arrow-right ml-1.5 text-sm"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="relative bg-gradient-to-br from-purple-950 to-pink-950 rounded-3xl p-8 text-white shadow-xl overflow-hidden border border-purple-800">
+            <div class="relative bg-indigo-800 rounded-lg p-8 text-white shadow-xl overflow-hidden border border-purple-800">
                 <div class="absolute -right-16 -top-16 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl"></div>
                 
                 <div class="relative z-10 flex flex-col h-full justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-extrabold uppercase tracking-widest text-purple-400 bg-purple-900/50 px-3 py-1 rounded-lg">💎 BUNDLE PROMO</span>
-                            <span class="text-xs text-amber-400 font-bold">Best Value</span>
+                            <span class="text-sm font-semibold text-indigo-200 bg-purple-900/50 px-3 py-1 rounded-lg">Bundle promo</span>
+                            <span class="text-sm text-indigo-200 font-semibold">Best Value</span>
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-2">Complete Beauty Bundle</h3>
-                        <p class="text-xs text-purple-200 leading-relaxed mb-6">Complete styling package so you look breathtakingly elegant for your special event.</p>
+                        <p class="text-sm text-purple-200 leading-relaxed mb-6">Complete styling package so you look breathtakingly elegant for your special event.</p>
                         
                         <ul class="space-y-3.5 mb-8">
-                            <li class="flex items-center text-xs text-purple-100">
-                                <i class="fa-solid fa-circle-check text-purple-400 mr-2.5 text-base"></i>
-                                <span>💄 Hair & Makeup Artistry</span>
+                            <li class="flex items-center text-sm text-purple-100">
+                                <i class="fa-solid fa-circle-check text-indigo-200 mr-2.5 text-base"></i>
+                                <span>Hair & Makeup Artistry</span>
                             </li>
-                            <li class="flex items-center text-xs text-purple-100">
-                                <i class="fa-solid fa-circle-check text-purple-400 mr-2.5 text-base"></i>
-                                <span>👗 Premium Gown Rental</span>
+                            <li class="flex items-center text-sm text-purple-100">
+                                <i class="fa-solid fa-circle-check text-indigo-200 mr-2.5 text-base"></i>
+                                <span>Premium Gown Rental</span>
                             </li>
-                            <li class="flex items-center text-xs text-purple-100">
-                                <i class="fa-solid fa-circle-check text-purple-400 mr-2.5 text-base"></i>
-                                <span>👠 Heels/Sandals</span>
+                            <li class="flex items-center text-sm text-purple-100">
+                                <i class="fa-solid fa-circle-check text-indigo-200 mr-2.5 text-base"></i>
+                                <span>Heels/Sandals</span>
                             </li>
-                            <li class="flex items-center text-xs text-purple-100">
-                                <i class="fa-solid fa-circle-check text-purple-400 mr-2.5 text-base"></i>
-                                <span>✨ Accessories Package</span>
+                            <li class="flex items-center text-sm text-purple-100">
+                                <i class="fa-solid fa-circle-check text-indigo-200 mr-2.5 text-base"></i>
+                                <span>Accessories Package</span>
                             </li>
                         </ul>
                     </div>
 
                     <div>
-                        <div class="border-t border-purple-900/80 pt-6 flex items-center justify-between mb-2">
+                        <div class="border-t border-purple-900/80 pt-6 flex flex-wrap items-center justify-between gap-4 mb-2">
                             <div>
-                                <p class="text-[10px] text-purple-400 font-semibold uppercase tracking-wider">Regular: ₱1,300 – ₱1,500</p>
+                                <p class="text-sm text-indigo-200 font-medium">Regular: ₱1,300 – ₱1,500</p>
                                 <p class="text-3xl font-extrabold text-white">₱1,000</p>
                             </div>
-                            <a href="https://www.facebook.com/fbdabarkadsryan" target="_blank" class="px-5 py-2.5 bg-purple-600 hover:bg-purple-700 text-xs font-bold rounded-lg transition-colors flex items-center text-white">
-                                Reserve Slot <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i>
+                            <a href="https://www.facebook.com/fbdabarkadsryan" target="_blank" class="px-4 py-3 bg-indigo-100 hover:bg-white text-sm font-bold rounded-lg transition-colors flex items-center text-indigo-950">
+                                Reserve slot <i class="fa-solid fa-arrow-right ml-1.5 text-sm"></i>
                             </a>
                         </div>
                     </div>
@@ -326,22 +290,22 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8" id="location-map">
             
             <div class="bg-white p-6 rounded-2xl border border-gray-150 shadow-sm">
-                <h4 class="text-base font-bold text-gray-900 mb-4 flex items-center">
+                <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                     <i class="fa-solid fa-star text-indigo-600 mr-2"></i>
                     What We Offer
                 </h4>
-                <ul class="grid grid-cols-2 gap-3 text-xs text-gray-600">
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2"></span> Long Gowns 👗</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2"></span> Filipiniana 🇵🇭</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2"></span> Sleeves ✨</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2"></span> Heels/Sandals 👠</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2"></span> Accessories 💍</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2"></span> Clutch Bags 👜</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2"></span> Shawl/Fur 🧣</li>
+                <ul class="grid grid-cols-2 gap-3 text-sm text-gray-600">
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2"></span> Long Gowns</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2"></span> Filipiniana</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2"></span> Sleeves</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2"></span> Heels/Sandals</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2"></span> Accessories</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2"></span> Clutch Bags</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-2"></span> Shawl/Fur</li>
                 </ul>
                 <div class="mt-5 pt-4 border-t border-gray-100">
-                    <p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-2">Store Hours</p>
-                    <div class="flex items-center space-x-2 text-xs text-gray-800">
+                    <p class="text-sm text-gray-600 font-semibold mb-2">Store Hours</p>
+                    <div class="flex items-center space-x-2 text-sm text-gray-800">
                         <i class="fa-regular fa-clock text-indigo-600"></i>
                         <span class="font-semibold">Open Daily: 8:00 AM – 8:00 PM</span>
                     </div>
@@ -349,16 +313,16 @@
             </div>
 
             <div class="bg-white p-6 rounded-2xl border border-gray-150 shadow-sm lg:col-span-2">
-                <h4 class="text-base font-bold text-gray-900 mb-4 flex items-center">
+                <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                     <i class="fa-solid fa-location-dot text-rose-500 mr-2"></i>
                     Boutique Location & Directions
                 </h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
                     <div>
-                        <p class="font-bold text-gray-950 mb-1">📍 Address:</p>
+                        <p class="font-semibold text-gray-950 mb-1 flex items-center gap-2"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Address</p>
                         <p class="text-gray-600 leading-relaxed mb-3">Talisay St., Fatima Chapel, Buhangin, Davao City</p>
                         
-                        <p class="font-bold text-gray-950 mb-1">📌 Landmarks:</p>
+                        <p class="font-semibold text-gray-950 mb-1 flex items-center gap-2"><i class="fa-solid fa-thumbtack" aria-hidden="true"></i> Landmarks</p>
                         <p class="text-gray-600 leading-relaxed mb-3">Near SPMC, Dumanlas, and Buhangin Gym</p>
                         
                         <a href="https://www.google.com/maps/@7.1097747,125.6204527,3a,75y,189.48h,83.95t/data=!3m7!1e1!3m5!1s77HPeti64el2Bx5dvpbHoQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D6.045206395374265%26panoid%3D77HPeti64el2Bx5dvpbHoQ%26yaw%3D189.48311110399615!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-flex items-center px-3.5 py-2 mt-2 bg-indigo-50 hover:bg-indigo-100 border border-indigo-100 rounded-lg text-indigo-700 font-bold transition-colors">
@@ -366,14 +330,14 @@
                         </a>
                     </div>
                     <div>
-                        <p class="font-bold text-gray-950 mb-1">🚗 How to reach us:</p>
+                        <p class="font-semibold text-gray-950 mb-1 flex items-center gap-2"><i class="fa-solid fa-car" aria-hidden="true"></i> How to reach us</p>
                         <ul class="space-y-2 text-gray-600 leading-relaxed">
                             <li class="flex items-start">
-                                <span class="text-indigo-600 mr-1.5">➡️</span>
+                                <span class="text-indigo-600 mr-1.5"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
                                 <span>From Buhangin Gym: Ride a tricycle to Talisay.</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="text-indigo-600 mr-1.5">➡️</span>
+                                <span class="text-indigo-600 mr-1.5"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
                                 <span>By Jeep: Ride a Buhangin jeep, stop at Purok Talisay, then walk downhill.</span>
                             </li>
                         </ul>
@@ -383,21 +347,21 @@
         </div>
 
         <div class="mt-8 bg-amber-50/50 border border-amber-100 rounded-2xl p-5">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs text-amber-900">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-amber-900">
                 <div class="flex items-center space-x-2">
-                    <span class="text-base">⚠️</span>
+                    <span class="text-base"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
                     <span>Limited accessories/heels.</span>
                 </div>
                 <div class="flex items-center space-x-2">
-                    <span class="text-base">⚠️</span>
+                    <span class="text-base"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
                     <span>First come, first served.</span>
                 </div>
                 <div class="flex items-center space-x-2">
-                    <span class="text-base">⚠️</span>
+                    <span class="text-base"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
                     <span>Free gown adjustments.</span>
                 </div>
                 <div class="flex items-center space-x-2">
-                    <span class="text-base">⚠️</span>
+                    <span class="text-base"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
                     <span>Limited slots daily.</span>
                 </div>
             </div>
@@ -405,14 +369,14 @@
     </section>
 
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="gallery">
-        <div class="text-center max-w-xl mx-auto mb-10">
-            <h2 class="text-3xl font-extrabold text-gray-950">Explore Glamour Gowns</h2>
+        <div class="max-w-xl mb-6">
+            <h2 class="text-3xl font-extrabold text-gray-950">The gown collection</h2>
             <p class="text-gray-500 mt-2 text-sm leading-relaxed">
-                Filter and browse through our signature wedding, debut, and cocktail gowns. Tap "View Details" to see specs.
+                Browse by silhouette and select a gown to see its details.
             </p>
         </div>
 
-        <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <div class="flex flex-wrap items-center gap-2 mb-10">
             <button onclick="filterGowns('All')" class="filter-btn active px-4 py-2 border border-gray-300 text-xs sm:text-sm font-bold rounded-lg text-gray-600 hover:border-indigo-400 hover:text-indigo-600 transition-colors shadow-sm focus:outline-none">
                 All Designs
             </button>
@@ -584,7 +548,7 @@
                             <p>Our shop is located at Talisay St., Fatima Chapel, Buhangin DC. Landmarks include SPMC, Dumanlas, and Buhangin Gym. You can find us on Google Maps for easy navigation.</p>
                             <p>Once you send us a message, we will provide you with the exact location and a map guide to our place.</p>
                             <div class="bg-indigo-50 border border-indigo-100 p-3 rounded-lg text-indigo-950 font-medium">
-                                <span class="font-bold block mb-1">📍 Commuters Landmark & Directions:</span>
+                                <span class="font-bold block mb-1"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Commuters Landmark & Directions:</span>
                                 SPMC, Dumanlas, Buhangin Gym. Sa Buhangin Gym, naog tapos sakay tricycle pa-Talisay. Kung jeep, sakyon ang Buhangin na jeep tapos naog sa Purok Talisay and baktas paubos.
                             </div>
                             <p class="pt-1">
@@ -593,7 +557,7 @@
                                 </a>
                             </p>
                             <p class="text-amber-850 font-medium bg-amber-50/70 border border-amber-100 p-3 rounded-lg">
-                                ⚠️ We are home-based. Kindly reserve and inform us before coming to ensure someone is available to assist you. Walk-ins are not guaranteed, as we may be closed or attending to other clients. Thank you!
+                                <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> We are home-based. Kindly reserve and inform us before coming to ensure someone is available to assist you. Walk-ins are not guaranteed, as we may be closed or attending to other clients. Thank you!
                             </p>
                         </div>
                     </div>
@@ -670,7 +634,7 @@
     <!-- TERMS & CONDITIONS WELCOME POPUP MODAL -->
     <div id="terms-modal" class="fixed inset-0 bg-gray-900/60 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden border border-gray-100 transform scale-95 transition-all duration-300" id="terms-modal-container">
-            <div class="px-6 py-5 bg-gradient-to-r from-indigo-700 to-purple-700 text-white flex items-center space-x-2">
+            <div class="px-6 py-5 bg-indigo-800 text-white flex items-center space-x-2">
                 <i class="fa-solid fa-circle-exclamation text-xl text-indigo-200"></i>
                 <h3 class="text-base font-bold tracking-wide uppercase">Important Notice: Terms & Conditions</h3>
             </div>
@@ -866,7 +830,7 @@
                             </a>
                         </p>
                         <p class="text-amber-850 font-medium bg-amber-50/70 border border-amber-100 p-2.5 rounded-lg text-[11px]">
-                            ⚠️ We are home-based. Kindly reserve and inform us before coming. Walk-ins are not guaranteed. Thank you!
+                            <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> We are home-based. Kindly reserve and inform us before coming. Walk-ins are not guaranteed. Thank you!
                         </p>
                     </div>
                 </div>
@@ -892,7 +856,9 @@
             const iconBars = document.getElementById('menu-icon-bars');
             const iconClose = document.getElementById('menu-icon-close');
             
-            if (menu.classList.contains('hidden')) {
+            const opening = menu.classList.contains('hidden');
+            document.getElementById('mobile-menu-toggle').setAttribute('aria-expanded', String(opening));
+            if (opening) {
                 menu.classList.remove('hidden');
                 iconBars.classList.add('hidden');
                 iconClose.classList.remove('hidden');

@@ -21,7 +21,7 @@ body :is(a, button, summary, textarea):focus-visible {
     gap: .65rem;
     padding: .65rem 1rem;
     text-align: center;
-    font-size: .8125rem;
+    font-size: .875rem;
     font-weight: 650;
     background: var(--lilac);
     color: var(--plum);
@@ -76,7 +76,7 @@ body :is(a, button, summary, textarea):focus-visible {
     padding: .8rem 1.15rem;
     border: 1px solid #bca1c4;
     border-radius: 3px;
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: 650;
 }
 
@@ -149,4 +149,28 @@ body :is(#gallery, #faq, #contacts-cta) h2 {
         width: min(100%, 32rem);
         justify-self: end;
     }
+}
+
+.dialog-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+i:is(.fa-solid, .fa-regular, .fa-brands) {
+    font-size: 1rem;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+i:is(.fa-bars, .fa-xmark) {
+    font-size: 1.25rem;
+}
+
+i:is(.fa-chevron-down, .fa-chevron-left, .fa-chevron-right) {
+    font-size: .875rem;
+}
+
+@media (min-width: 640px) {
+    .dialog-title { font-size: 1.5rem; }
 }
